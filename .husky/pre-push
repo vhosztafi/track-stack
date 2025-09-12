@@ -1,0 +1,9 @@
+#!/usr/bin/env sh.. "$(dirname "$0")/h"
+
+echo "Pre-push actions"
+if npx git-branch-is -q main
+then
+  npm run validate
+else
+  echo "Not on 'main' branch, skipping pre-push actions."
+fi

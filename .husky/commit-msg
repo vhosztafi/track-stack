@@ -1,0 +1,4 @@
+#!/usr/bin/env sh.. "$(dirname "$0")/h"
+
+echo "Commit message validation -> commits must match the 'Conventional Commits' pattern. For reference: https://www.conventionalcommits.org/en/v1.0.0/"
+npx commitlint -V --edit $1

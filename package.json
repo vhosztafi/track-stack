@@ -7,20 +7,26 @@
     "prebuild": "npm run validate",
     "build": "tsc -b && vite build",
     "dev": "vite",
+    "format": "npm run prettier --ignore-path .prettierignore --ignore-unknown .",
+    "format:fix": "npm run prettier -- --write",
+    "format:validate": "npm run prettier -- --list-different",
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "npm run lint -- --fix",
-    "preview": "vite preview",
+    "prepare": "husky",
     "prettier": "prettier --ignore-path .prettierignore --ignore-unknown .",
     "prettier:format": "npm run prettier -- --write",
     "prettier:validate": "npm run prettier -- --list-different",
+    "preview": "vite preview",
     "typescript:validate": "tsc",
-    "validate": "concurrently npm:typescript:validate npm:prettier:validate npm:lint"
+    "validate": "concurrently npm:format:validate npm:lint:validate npm:typescript:validate"
   },
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.35.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
@@ -42,6 +48,8 @@
     "eslint-plugin-tailwindcss": "^3.18.2",
     "eslint-plugin-testing-library": "^7.7.0",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.43.0",
