@@ -59,6 +59,16 @@ export default {
       },
       fontFamily: {
         sans: ['Johnston100-Light', '"Avenir Next"', 'Helvetica', 'Arial', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
+      fontWeight: {
+        300: '300',
+        400: '400',
+        500: '500',
+        600: '600',
+      },
+      ringColor: {
+        DEFAULT: 'theme(colors.tfl.focus)',
       },
     },
   },
