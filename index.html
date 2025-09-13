@@ -1,13 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <title>TrackStack - TfL Tube Line Status Viewer</title>
+    <meta
+      name="description"
+      content="Real-time status of all London Underground tube lines with a clean and simple interface."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/svg+xml" href="/trackstack-logo.svg" />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/johnston100-w03-light.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/johnston100-w03-medium.woff2"
+      crossorigin
+    />
   </head>
   <body>
     <div id="root"></div>
+
+    <noscript>
+      <p>
+        TrackStack requires JavaScript to run. You can still view line status on the official TfL
+        website.
+      </p>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
