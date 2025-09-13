@@ -53,3 +53,27 @@
     scroll-behavior: auto !important;
   }
 }
+
+:root {
+  --focus-color: theme(colors.tfl.ink);
+}
+
+*:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  .sr-only-but-not-for-focus:focus,
+  .sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
