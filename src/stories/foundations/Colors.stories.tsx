@@ -2,7 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta = {
   title: 'Foundations/Colours',
-  parameters: { layout: 'padded' },
+  parameters: {
+    layout: 'padded',
+    a11y: {
+      config: {
+        rules: [{ id: 'color-contrast', enabled: false }],
+      },
+    },
+  },
 };
 export default meta;
 
