@@ -4,5 +4,5 @@ import App from './App';
 
 test('renders TrackStack heading', () => {
   render(<App />);
-  expect(screen.getByText(/TrackStack/i)).toBeInTheDocument();
+  expect(screen.getByText(/TrackStack App/i)).toBeInTheDocument();
 });
