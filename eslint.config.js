@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import vitest from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
@@ -7,11 +8,13 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tailwind from 'eslint-plugin-tailwindcss';
-import vitest from 'eslint-plugin-vitest';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig([
+  {
+    ignores: ['node_modules', 'dist', 'build', 'coverage', 'storybook-static', 'Notes'],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   react.configs.flat.recommended,
@@ -47,7 +50,7 @@ export default defineConfig([
   },
   prettier,
   {
-    files: ['**/*.test.{js,ts,jsx,tsx}'],
+    files: ['**/*.{test,spec}.{js,ts,jsx,tsx}'],
     plugins: { vitest },
     rules: {
       ...vitest.configs.recommended.rules,
@@ -63,6 +66,5 @@ export default defineConfig([
   {
     files: ['./*.{js,ts}', './.storybook/**/*.{js,ts}'],
     rules: { '@typescript-eslint/no-var-requires': 'off' },
-    ignores: ['node_modules', 'dist', 'build', 'coverage', 'storybook-static', 'Notes'],
   },
 ]);
