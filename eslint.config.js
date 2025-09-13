@@ -7,6 +7,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tailwind from 'eslint-plugin-tailwindcss';
+import vitest from 'eslint-plugin-vitest';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -45,6 +46,20 @@ export default defineConfig([
     },
   },
   prettier,
+  {
+    files: ['**/*.test.{js,ts,jsx,tsx}'],
+    plugins: { vitest },
+    rules: {
+      ...vitest.configs.recommended.rules,
+    },
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...vitest.environments.env.globals,
+      },
+    },
+  },
   {
     files: ['./*.{js,ts}', './.storybook/**/*.{js,ts}'],
     rules: { '@typescript-eslint/no-var-requires': 'off' },

@@ -21,6 +21,10 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["**/*.test.*", "node_modules", "dist"]
+  "include": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/setupTests.ts",
+    "node_modules/vitest/globals.d.ts"
+  ]
 }
