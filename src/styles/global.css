@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Johnston100-Light';
+    src: url('/fonts/johnston100-w03-light.eot');
+    src: url('/fonts/johnston100-w03-light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/johnston100-w03-light.woff2') format('woff2'),
+    url('/fonts/johnston100-w03-light.woff') format('woff'),
+    url('/fonts/johnston100-w03-light.ttf') format('truetype'),
+    url('/fonts/johnston100-w03-light.svg#Johnston100-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Johnston100';
+    src: url('/fonts/johnston100-w03-medium.eot');
+    src: url('/fonts/johnston100-w03-medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/johnston100-w03-medium.woff2') format('woff2'),
+    url('/fonts/johnston100-w03-medium.woff') format('woff'),
+    url('/fonts/johnston100-w03-medium.ttf') format('truetype'),
+    url('/fonts/johnston100-w03-medium.svg#Johnston100-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    html {
+        @apply font-sans;
+    }
+}
