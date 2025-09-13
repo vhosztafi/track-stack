@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "coverage": "vitest run --coverage --project unit",
     "deps:check": "ncu",
     "deps:check:minor": "ncu -t minor",
     "deps:check:patch": "ncu -t patch",
@@ -35,6 +36,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.87.4",
     "axios": "^1.12.1",
+    "markdown-to-jsx": "^7.7.13",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -81,6 +83,8 @@
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "lint-staged": "^16.1.6",
+    "msw": "^2.11.2",
+    "msw-storybook-addon": "^2.0.5",
     "npm-check-updates": "^18.1.1",
     "playwright": "^1.55.0",
     "postcss": "^8.5.6",

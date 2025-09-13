@@ -24,7 +24,7 @@
   "include": [
     "src/**/*.test.ts",
     "src/**/*.test.tsx",
-    "src/setupTests.ts",
+    "src/test/setupTests.ts",
     "node_modules/vitest/globals.d.ts"
   ]
 }

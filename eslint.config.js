@@ -54,6 +54,12 @@ export default defineConfig([
     plugins: { vitest },
     rules: {
       ...vitest.configs.recommended.rules,
+      'vitest/expect-expect': [
+        'error',
+        {
+          assertFunctionNames: ['expect', 'expectTypeOf'],
+        },
+      ],
     },
     languageOptions: {
       globals: {

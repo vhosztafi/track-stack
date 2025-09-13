@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 const preview: Preview = {
   parameters: {
@@ -8,6 +9,8 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    initialize: initialize({ onUnhandledRequest: 'bypass' }),
+    decorators: [mswDecorator],
 
     a11y: {
       // 'todo' - show a11y violations in the test UI only

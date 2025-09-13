@@ -4,30 +4,57 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 const dirname =
   typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
-// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
   },
+  optimizeDeps: {
+    exclude: ['msw', 'msw/node', 'msw/browser'],
+  },
   test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/setupTests.ts',
-    css: true,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html', 'lcov'],
+      reportsDirectory: './coverage',
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: [
+        'node_modules/**',
+        '**/*.d.ts',
+        'src/stories/**',
+        'src/test/**',
+        '.storybook/**',
+        '**/*.{config,conf}.{ts,js}',
+        '**/Notes/**',
+        'src/types/**',
+      ],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 70,
+        statements: 80,
+      },
+    },
     projects: [
       {
-        extends: true,
+        test: {
+          name: 'unit',
+          globals: true,
+          environment: 'jsdom',
+          setupFiles: './src/test/setupTests.ts',
+          css: true,
+          include: ['src/**/*.test.{ts,tsx}'],
+          exclude: ['node_modules/**', 'src/stories/**', '.storybook/**'],
+        },
+      },
+      {
         plugins: [
-          // The plugin will run tests for the stories defined in your Storybook config
-          // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-          storybookTest({
+          (await import('@storybook/addon-vitest/vitest-plugin')).storybookTest({
             configDir: path.join(dirname, '.storybook'),
           }),
         ],
