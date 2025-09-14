@@ -12,7 +12,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const base =
-  'inline-flex items-center justify-center px-4 md:px-5 text-lg sans font-400 leading-snug rounded-lg ' +
+  'inline-flex items-center justify-center px-4 md:px-5 text-lg font-sans font-500 leading-snug rounded-lg ' +
   'border-2 border-mode-underground transition-colors duration-150 ' +
   'focus:outline-none focus:border-white focus:ring-2 focus:ring-tfl-ink ' +
   'disabled:opacity-50 disabled:cursor-not-allowed';
@@ -54,7 +54,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" strokeWidth="4" fill="none" />
           </svg>
         )}
-        <span className={cn(loading && 'pl-2', variant === 'external' && 'pr-2')}>{children}</span>
+        <span className={cn('font-500', loading && 'pl-2', variant === 'external' && 'pr-2')}>
+          {children}
+        </span>
         {variant === 'external' && (
           <span aria-hidden="true" className="-mr-1">
             <svg viewBox="0 0 24 24" className="h-4 w-4">
