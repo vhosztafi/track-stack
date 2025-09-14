@@ -3,12 +3,12 @@ import { render, screen } from '@testing-library/react';
 
 import App from './App';
 
-test('renders TrackStack heading', () => {
+test('renders heading', () => {
   const qc = new QueryClient();
   render(
     <QueryClientProvider client={qc}>
       <App />
     </QueryClientProvider>
   );
-  expect(screen.getByRole('heading', { name: /trackstack/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /status/i })).toBeInTheDocument();
 });
