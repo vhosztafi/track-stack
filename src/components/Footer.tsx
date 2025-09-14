@@ -22,6 +22,18 @@ export default function Footer() {
             </Link>{' '}
             Visual style approximated for demo purposes.
           </p>
+          <p className="mt-4 text-[1rem] font-300 leading-6">
+            Webfont by{' '}
+            <Link
+              href="https://www.onlinewebfonts.com/fonts/johnston100"
+              variant="subtle"
+              external={true}
+              newTab={true}
+            >
+              OnlineWebFonts.com
+            </Link>
+            , used with attribution as required.
+          </p>
         </section>
         <section>
           <h2 className="font-lg mb-3 text-base font-400">Data &amp; accuracy</h2>
