@@ -16,16 +16,16 @@ export default function Header() {
           <Link href="/" variant="subtle">
             <span className="inline-flex items-center gap-x-3 whitespace-nowrap">
               <Logo aria-hidden="true" className="inline-block shrink-0 align-middle" />
-              <span className="inline-block align-middle text-lg font-500 leading-tight">
+              <h2 className="inline-block align-middle text-lg font-500 leading-tight">
                 TrackStack
-              </span>
+              </h2>
             </span>
           </Link>
         </div>
 
         <div className="flex items-center gap-3" aria-busy={isLoading ? 'true' : undefined}>
           <p
-            className="font-sansLight whitespace-nowrap"
+            className="whitespace-nowrap font-300"
             role="status"
             id="last-updated"
             aria-live="polite"
