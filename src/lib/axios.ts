@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import axios, { type AxiosRequestConfig } from 'axios';
 
 export const api = axios.create({
