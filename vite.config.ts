@@ -28,6 +28,7 @@ export default defineConfig({
         '**/*.d.ts',
         'src/stories/**',
         'src/test/**',
+        'src/**/*.stories.tsx',
         '.storybook/**',
         '**/*.{config,conf}.{ts,js}',
         '**/Notes/**',
@@ -49,7 +50,7 @@ export default defineConfig({
           setupFiles: './src/test/setupTests.ts',
           css: true,
           include: ['src/**/*.test.{ts,tsx}'],
-          exclude: ['node_modules/**', 'src/stories/**', '.storybook/**'],
+          exclude: ['node_modules/**', 'src/stories/**', '.storybook/**', 'src/**/*.stories.tsx'],
         },
       },
       {
