@@ -58,8 +58,7 @@ export default {
         'inset-1': 'inset 0 0 1px 1px #03071c',
       },
       fontFamily: {
-        sansLight: ['Johnston100-Light', '"Avenir Next"', 'Helvetica', 'Arial', 'sans-serif'],
-        sans: ['Johnston100-Regular', '"Avenir Next"', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Johnston100', '"Avenir Next"', 'Helvetica', 'Arial', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       fontWeight: {
