@@ -36,7 +36,8 @@ export const Link = React.forwardRef<HTMLAnchorElement, BaseProps>(
           className
         )}
       >
-        <span>{children}</span>
+        {children && typeof children === 'string' ? <span>{children}</span> : children}
+
         {external && (
           <span aria-hidden="true" className="inline-block">
             <svg viewBox="0 0 24 24" className="h-4 w-4">
