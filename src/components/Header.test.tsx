@@ -32,7 +32,7 @@ describe('Header', () => {
   it('renders brand link to home with product name', () => {
     render(<Header />);
 
-    const brandLink = screen.getByRole('link', { name: /trackstack/i });
+    const brandLink = screen.getByRole('link', { name: /track stack/i });
     expect(brandLink).toBeInTheDocument();
     expect(brandLink).toHaveAttribute('href', '/');
   });

@@ -16,8 +16,8 @@ export default function Header() {
           <Link href="/" variant="subtle">
             <span className="inline-flex items-center gap-x-3 whitespace-nowrap">
               <Logo aria-hidden="true" className="inline-block shrink-0 align-middle" />
-              <h2 className="inline-block align-middle text-lg font-500 leading-tight">
-                TrackStack
+              <h2 className="ml-[23px] mt-0.5 inline-block align-middle text-lg font-400 leading-tight">
+                Track Stack
               </h2>
             </span>
           </Link>
