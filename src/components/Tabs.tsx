@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { cn } from '../lib/cn';
 
-type TabItem = {
+export type TabItem = {
   id: string;
   label: string;
 };
