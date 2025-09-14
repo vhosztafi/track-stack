@@ -21,3 +21,18 @@ export interface Line {
   lineStatuses: LineStatus[];
   disruptions?: Disruption[];
 }
+
+export interface SubStatus {
+  label: string;
+  scope?: string;
+}
+
+export type LineCardVM = {
+  id: string;
+  line: string;
+  colourClassName: string;
+  subStatuses: SubStatus[];
+  canExpand: boolean;
+  isGoodService: boolean;
+  defaultOpen?: boolean;
+};
