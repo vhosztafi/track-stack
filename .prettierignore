@@ -2,3 +2,4 @@ dist
 Notes
 *.md
 coverage/
+storybook-static/
