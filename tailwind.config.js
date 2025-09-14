@@ -70,6 +70,9 @@ export default {
       ringColor: {
         DEFAULT: 'theme(colors.tfl.focus)',
       },
+      borderRadius: {
+        xs: '1px',
+      },
     },
   },
   plugins: [tailwindTypography],
