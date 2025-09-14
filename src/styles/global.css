@@ -30,6 +30,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Johnston100';
+  src: url('/fonts/johnston100-w03-regular.eot');
+  src:
+    url('/fonts/johnston100-w03-regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/johnston100-w03-regular.woff2') format('woff2'),
+    url('/fonts/johnston100-w03-regular.woff') format('woff'),
+    url('/fonts/johnston100-w03-regular.ttf') format('truetype'),
+    url('/fonts/johnston100-w03-regular.svg#Johnston100-Regular') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     @apply font-sans;
