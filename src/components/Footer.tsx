@@ -7,7 +7,7 @@ export default function Footer() {
       role="contentinfo"
       className="border-t border-t-tfl-border bg-white text-tfl-ink"
     >
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-2 md:px-6 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-2 md:px-6 lg:grid-cols-4 lg:px-0">
         <section>
           <h2 className="font-lg mb-3 text-base font-400">Attributions</h2>
           <p className="text-[1rem] font-300 leading-6">
