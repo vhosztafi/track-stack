@@ -58,7 +58,7 @@ function App() {
             <Tabs items={tabs} onValueChange={(id) => setSelectedTab(id)} bordered={false} />
           )}
 
-          {!isLoading && (
+          {isLoading && (
             <div className="flex min-h-[400px] items-center justify-center">
               <Loader text="Loading tube statuses..." size="lg" variant="simple" />
             </div>
