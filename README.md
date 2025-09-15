@@ -1,5 +1,9 @@
 # TrackStack - TfL Line Status Viewer
 
+[![CI](https://github.com/vhosztafi/track-stack/workflows/CI/badge.svg)](https://github.com/vhosztafi/track-stack/actions)
+[![codecov](https://codecov.io/gh/vhosztafi/track-stack/branch/master/graph/badge.svg)](https://codecov.io/gh/vhosztafi/track-stack)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A single-page React + TypeScript app built with Vite.  
 Displays the current status of London Underground (and optionally other modes) using
 the [TfL Open Data API](https://api.tfl.gov.uk).
