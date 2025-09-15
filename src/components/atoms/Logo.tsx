@@ -6,5 +6,13 @@ type LogoProps = {
 };
 
 export function Logo({ className, alt = 'TrackStack Logo' }: LogoProps) {
-  return <img src="/trackstack-logo.svg" alt={alt} className={cn('h-8 w-auto', className)} />;
+  return (
+    <img
+      src="/trackstack-logo.svg"
+      alt={alt}
+      width="32"
+      height="32"
+      className={cn('h-8 w-auto', className)}
+    />
+  );
 }
