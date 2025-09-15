@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master, dev ]
+    branches: [master, dev]
   pull_request:
-    branches: [ master, dev ]
+    branches: [master, dev]
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 18, 20 ]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout code
@@ -112,7 +112,6 @@ jobs:
 
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli@0.12.x
-
 
       - name: Run Lighthouse CI
         run: lhci autorun
