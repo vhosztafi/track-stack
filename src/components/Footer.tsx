@@ -5,7 +5,7 @@ export default function Footer() {
     <footer
       id="footer"
       role="contentinfo"
-      className="border-t border-t-tfl-border bg-white text-tfl-ink"
+      className="min-h-60 border-t border-t-tfl-border bg-white text-tfl-ink"
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-2 md:px-6 lg:grid-cols-4 lg:px-0">
         <section>
