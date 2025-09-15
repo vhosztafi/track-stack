@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header
       id="main-nav"
-      className="fixed left-0 top-0 z-10 w-full bg-white px-4 text-tfl-ink shadow-xl md:px-6"
+      className="fixed left-0 top-0 z-20 w-full bg-white px-4 text-tfl-ink shadow-xl md:px-6"
     >
       <div className="relative mx-auto box-border flex min-h-[64px] max-w-[1440px] items-center justify-between gap-3 py-2 md:min-h-[80px] md:py-4">
         <div className="flex items-center gap-3">
