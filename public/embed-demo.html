@@ -11,10 +11,12 @@
         padding: 20px;
         background-color: #f5f5f5;
       }
+
       .demo-container {
         max-width: 1200px;
         margin: 0 auto;
       }
+
       .demo-section {
         background: white;
         border-radius: 8px;
@@ -22,21 +24,25 @@
         margin-bottom: 30px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
       .demo-section h2 {
         margin-top: 0;
         color: #333;
       }
+
       .iframe-container {
         border: 1px solid #ddd;
         border-radius: 4px;
         overflow: hidden;
         margin-top: 15px;
       }
+
       iframe {
         width: 100%;
         border: none;
         display: block;
       }
+
       .code-block {
         background: #f8f9fa;
         border: 1px solid #e9ecef;
@@ -47,6 +53,7 @@
         font-size: 14px;
         overflow-x: auto;
       }
+
       .url-example {
         background: #e3f2fd;
         padding: 10px;
@@ -69,7 +76,7 @@
         <p>Shows the complete status view with title and tabs.</p>
         <div class="url-example">URL: /embed</div>
         <div class="iframe-container">
-          <iframe src="/embed" height="600"></iframe>
+          <iframe src="https://trackstack.live/embed" height="600"></iframe>
         </div>
       </div>
 
@@ -78,7 +85,7 @@
         <p>Shows only active services (no disruptions).</p>
         <div class="url-example">URL: /embed?tab=active</div>
         <div class="iframe-container">
-          <iframe src="/embed?tab=active" height="400"></iframe>
+          <iframe src="https://trackstack.live/embed?tab=active" height="400"></iframe>
         </div>
       </div>
 
@@ -87,7 +94,7 @@
         <p>Shows only services with disruptions.</p>
         <div class="url-example">URL: /embed?tab=paused</div>
         <div class="iframe-container">
-          <iframe src="/embed?tab=paused" height="400"></iframe>
+          <iframe src="https://trackstack.live/embed?tab=paused" height="400"></iframe>
         </div>
       </div>
 
@@ -96,7 +103,10 @@
         <p>Ultra-minimal view for dashboard widgets.</p>
         <div class="url-example">URL: /embed?hideTitle=true&hideTabs=true</div>
         <div class="iframe-container">
-          <iframe src="/embed?hideTitle=true&hideTabs=true" height="300"></iframe>
+          <iframe
+            src="https://trackstack.live/embed?hideTitle=true&hideTabs=true"
+            height="300"
+          ></iframe>
         </div>
       </div>
 
@@ -105,7 +115,10 @@
         <p>Shows only active services with minimal UI.</p>
         <div class="url-example">URL: /embed?tab=active&hideTitle=true&hideTabs=true</div>
         <div class="iframe-container">
-          <iframe src="/embed?tab=active&hideTitle=true&hideTabs=true" height="250"></iframe>
+          <iframe
+            src="https://trackstack.live/embed?tab=active&hideTitle=true&hideTabs=true"
+            height="250"
+          ></iframe>
         </div>
       </div>
 
