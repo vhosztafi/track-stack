@@ -10,7 +10,7 @@ import { mapToVM } from './lib/utils.ts';
 
 function App() {
   const [selectedTab, setSelectedTab] = useState('all');
-  const { data } = useTubeStatuses();
+  const { data, isLoading, error, isError } = useTubeStatuses();
 
   const items = useMemo(() => mapToVM(data ?? []), [data]);
 
@@ -45,8 +45,30 @@ function App() {
             Status
           </h1>
 
-          <Tabs items={tabs} onValueChange={(id) => setSelectedTab(id)} bordered={false} />
-          <LineStatusGrid items={filtered || []} />
+          {isError && (
+            <div className="flex min-h-[400px] items-center justify-center">
+              <div className="text-lg text-red-600">
+                Error loading tube statuses:{' '}
+                {(error && (error as Error).message) || 'Unknown error'}
+              </div>
+            </div>
+          )}
+
+          {!isError && (
+            <Tabs items={tabs} onValueChange={(id) => setSelectedTab(id)} bordered={false} />
+          )}
+
+          {isLoading && (
+            <div className="flex min-h-[400px] items-center justify-center">
+              <div className="text-lg">Loading tube statuses...</div>
+            </div>
+          )}
+
+          {filtered.length > 0 ? (
+            <LineStatusGrid items={filtered || []} />
+          ) : (
+            <div className="my-6 text-lg">No tube statuses found</div>
+          )}
         </section>
       </Layout>
     </>
