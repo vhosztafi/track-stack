@@ -29,6 +29,8 @@
     "storybook:start": "storybook dev -p 6006 --no-open",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "test:unit": "vitest --run --environment jsdom --ignore **/*.stories.*",
+    "test:stories": "vitest --run --pool=threads --poolOptions.threads.singleThread=true",
     "test:watch": "vitest --watch",
     "typescript:validate": "tsc",
     "validate": "concurrently npm:format:validate npm:lint:validate npm:typescript:validate"
