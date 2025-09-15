@@ -3,6 +3,36 @@ import tailwindTypography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './.storybook/**/*.{ts,tsx,js,jsx,mdx}'],
+  safelist: [
+    ...Object.keys({
+      bakerloo: '#b26300',
+      central: '#dc241f',
+      circle: '#ffc80a',
+      district: '#007d32',
+      'hammersmith-city': '#f589a6',
+      jubilee: '#838d93',
+      metropolitan: '#9b0058',
+      northern: '#000000',
+      piccadilly: '#0019a8',
+      victoria: '#039be5',
+      'waterloo-city': '#76d0bd',
+      elizabeth: '#60399e',
+      overground: '#fa7b05',
+      dlr: '#00afad',
+      tram: '#5fb526',
+      liberty: '#61686b',
+      lioness: '#ffa600',
+      mildmay: '#006fe6',
+      suffragette: '#18a95d',
+      weaver: '#9b0058',
+      windrush: '#dc241f',
+    }).flatMap((lineId) => [
+      `bg-tfl-line-${lineId}`,
+      `border-y-tfl-line-${lineId}`,
+      `border-tfl-line-${lineId}`,
+      `text-tfl-line-${lineId}`,
+    ]),
+  ],
   theme: {
     extend: {
       colors: {
