@@ -91,4 +91,100 @@
     white-space: nowrap;
     border: 0;
   }
+
+  /* Loader animations */
+  @keyframes logo-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes logo-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes logo-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes logo-color-shift {
+    0% {
+      filter: hue-rotate(0deg) saturate(1);
+    }
+    25% {
+      filter: hue-rotate(90deg) saturate(1.2);
+    }
+    50% {
+      filter: hue-rotate(180deg) saturate(1);
+    }
+    75% {
+      filter: hue-rotate(270deg) saturate(1.2);
+    }
+    100% {
+      filter: hue-rotate(360deg) saturate(1);
+    }
+  }
+
+  @keyframes logo-wiggle {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
+
+  .loader-spin {
+    animation: logo-spin 2s linear infinite;
+  }
+
+  .loader-pulse {
+    animation: logo-pulse 1.5s ease-in-out infinite;
+  }
+
+  .loader-bounce {
+    animation: logo-bounce 1s ease-in-out infinite;
+  }
+
+  .loader-color-shift {
+    animation: logo-color-shift 3s ease-in-out infinite;
+  }
+
+  .loader-wiggle {
+    animation: logo-wiggle 0.5s ease-in-out infinite;
+  }
+
+  .loader-combo {
+    animation:
+      logo-spin 2s linear infinite,
+      logo-pulse 1.5s ease-in-out infinite,
+      logo-bounce 1s ease-in-out infinite;
+  }
+
+  .loader-funky {
+    animation:
+      logo-spin 2s linear infinite,
+      logo-pulse 1.5s ease-in-out infinite,
+      logo-bounce 1s ease-in-out infinite,
+      logo-wiggle 0.5s ease-in-out infinite;
+  }
 }
