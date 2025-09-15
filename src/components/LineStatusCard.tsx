@@ -42,8 +42,9 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
       <button
         type="button"
         aria-expanded={canExpand ? open : undefined}
-        aria-controls={canExpand ? panelId : undefined}
+        aria-controls={canExpand && open ? panelId : undefined}
         aria-disabled={!canExpand || undefined}
+        aria-label={line}
         disabled={!canExpand}
         onClick={() => canExpand && setOpen((v) => !v)}
         className={cn(
@@ -108,16 +109,18 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
               <div className="flex w-full">
                 <div className="m-0 w-full pl-5 pr-7 pt-5 md:w-[70%] md:pt-6"></div>
                 <div className="w-full">
-                  <ul className="m-0 mb-4" role="list">
-                    {item.subStatuses.map(
-                      (subStatus, idx) =>
-                        subStatus.scope && (
-                          <li key={`${line}-${idx}`} className="mb-2">
-                            <p>{subStatus.scope}</p>
-                          </li>
-                        )
-                    )}
-                  </ul>
+                  {subStatuses && subStatuses.length > 0 && (
+                    <ul className="m-0 mb-4" role="list">
+                      {item.subStatuses.map(
+                        (subStatus, idx) =>
+                          subStatus.scope && (
+                            <li key={`${line}-${idx}`} className="mb-2">
+                              <p>{subStatus.scope}</p>
+                            </li>
+                          )
+                      )}
+                    </ul>
+                  )}
                   <Button variant="secondary" size="md" className="mb-0 h-10 min-w-72">
                     Replan your journey
                   </Button>
