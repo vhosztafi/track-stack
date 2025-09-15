@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 
 import Layout from './components/Layout';
 import LineStatusGrid from './components/LineStatusGrid.tsx';
+import { Loader } from './components/Loader.tsx';
 import Tabs, { type TabItem } from './components/Tabs.tsx';
 import { useTubeStatuses } from './hooks/useTubeStatuses.ts';
 import { mapToVM } from './lib/utils.ts';
@@ -48,8 +49,7 @@ function App() {
           {isError && (
             <div className="flex min-h-[400px] items-center justify-center">
               <div className="text-lg text-red-600">
-                Error loading tube statuses:{' '}
-                {(error && (error as Error).message) || 'Unknown error'}
+                Error loading tube statuses: {(error as Error).message || 'Unknown error'}
               </div>
             </div>
           )}
@@ -58,16 +58,16 @@ function App() {
             <Tabs items={tabs} onValueChange={(id) => setSelectedTab(id)} bordered={false} />
           )}
 
-          {isLoading && (
+          {!isLoading && (
             <div className="flex min-h-[400px] items-center justify-center">
-              <div className="text-lg">Loading tube statuses...</div>
+              <Loader text="Loading tube statuses..." size="lg" variant="simple" />
             </div>
           )}
 
           {filtered.length > 0 ? (
             <LineStatusGrid items={filtered || []} />
           ) : (
-            <div className="my-6 text-lg">No tube statuses found</div>
+            <div className="text-lg">No tube statuses found</div>
           )}
         </section>
       </Layout>

@@ -2,6 +2,7 @@ import { useTubeStatuses } from '../hooks/useTubeStatuses.ts';
 import { Button } from './atoms/Button.tsx';
 import { Link } from './atoms/Link.tsx';
 import { Logo } from './atoms/Logo';
+import { Loader } from './Loader.tsx';
 
 export default function Header() {
   const { lastUpdatedAt, isLoading, refetch } = useTubeStatuses();
@@ -15,7 +16,16 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link href="/" variant="subtle">
             <span className="inline-flex items-center gap-x-3 whitespace-nowrap">
-              <Logo aria-hidden="true" className="inline-block shrink-0 align-middle" />
+              {isLoading ? (
+                <Loader
+                  text=""
+                  size="md"
+                  variant="simple"
+                  className="inline-block shrink-0 align-middle"
+                />
+              ) : (
+                <Logo aria-hidden="true" className="inline-block shrink-0 align-middle" />
+              )}
               <h2 className="ml-[23px] mt-0.5 inline-block align-middle text-lg font-400 leading-tight">
                 Track Stack
               </h2>
