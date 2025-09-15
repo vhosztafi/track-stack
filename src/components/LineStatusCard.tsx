@@ -55,7 +55,7 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
       >
         <div className="flex w-full flex-col items-stretch border-t border-transparent md:flex-row">
           <div className="flex w-full">
-            <h4
+            <h2
               id={`${panelId}-heading`}
               className={cn(
                 'w-full md:w-[70%]',
@@ -65,7 +65,7 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
               )}
             >
               {line}
-            </h4>
+            </h2>
 
             <div className="w-full py-5 text-base leading-6 md:py-5">
               {subStatuses && subStatuses.length > 0 && (
