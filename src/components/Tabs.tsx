@@ -109,9 +109,11 @@ export default function Tabs({
               }
             }}
             className={cn(
-              'h-12 px-8 py-3 text-[1rem] transition',
+              'h-12 px-4 py-3 text-[1rem] transition sm:px-8',
               'focus:z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-tfl-ink focus-visible:ring-offset-2',
-              active ? 'rounded-t-xl bg-white font-400' : 'font-300 hover:underline'
+              active
+                ? 'rounded-t-xl bg-white font-400'
+                : 'font-300 hover:rounded-t-xl hover:bg-tfl-border hover:underline'
             )}
           >
             {item.label}

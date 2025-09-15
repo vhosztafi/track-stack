@@ -80,7 +80,7 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
             </div>
 
             {canExpand ? (
-              <div className="relative ml-2 w-7 pt-5 md:ml-14 md:mr-5 md:w-14">
+              <div className="relative mx-2 w-7 pt-5 md:ml-14 md:mr-5 md:w-14">
                 <span
                   aria-hidden="true"
                   className={cn(
@@ -97,7 +97,7 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
                 />
               </div>
             ) : (
-              <div className="relative ml-2 w-7 pt-5 md:ml-14 md:mr-5 md:w-14"></div>
+              <div className="relative mx-2 w-7 pt-5 md:ml-14 md:mr-5 md:w-14"></div>
             )}
           </div>
         </div>
@@ -107,8 +107,8 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
           <div className="bg-tfl-surfaceMuted">
             <div className="border-t border-tfl-panel bg-white py-5 text-[0.95rem] font-300 leading-6 text-tfl-ink">
               <div className="flex w-full">
-                <div className="m-0 w-full pl-5 pr-7 pt-5 md:w-[70%] md:pt-6"></div>
-                <div className="w-full">
+                <div className="m-0 hidden w-full pl-5 pr-7 pt-5 sm:block md:w-[70%] md:pt-6"></div>
+                <div className="w-full px-6 sm:px-0">
                   {subStatuses && subStatuses.length > 0 && (
                     <ul className="m-0 mb-4" role="list">
                       {item.subStatuses.map(
@@ -121,11 +121,22 @@ export default function LineStatusCard({ item }: LineStatusCardProps) {
                       )}
                     </ul>
                   )}
-                  <Button variant="secondary" size="md" className="mb-0 h-10 min-w-72">
+                  <Button
+                    variant="secondary"
+                    size="md"
+                    className="mb-0 h-10 min-w-24 sm:min-w-72"
+                    onClick={() =>
+                      window.open(
+                        'https://tfl.gov.uk/plan-a-journey/',
+                        '_blank',
+                        'noopener,noreferrer'
+                      )
+                    }
+                  >
                     Replan your journey
                   </Button>
                 </div>
-                <div className="relative ml-2 w-7 pt-5 md:ml-14 md:mr-5 md:w-14"></div>
+                <div className="relative ml-2 hidden w-7 pt-5 sm:block md:ml-14 md:mr-5 md:w-14"></div>
               </div>
             </div>
           </div>

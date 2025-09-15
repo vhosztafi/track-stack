@@ -42,7 +42,7 @@ function App() {
     <>
       <Layout>
         <section aria-labelledby="status-heading" className="mx-auto max-w-[1440px]">
-          <h1 id="status-heading" className="mb-8 text-6xl font-400 text-tfl-ink">
+          <h1 id="status-heading" className="mb-8 text-4xl font-400 text-tfl-ink sm:text-6xl">
             Status
           </h1>
 

@@ -12,7 +12,7 @@ export default function Header() {
       id="main-nav"
       className="fixed left-0 top-0 z-10 w-full bg-white px-4 text-tfl-ink shadow-xl md:px-6"
     >
-      <div className="relative mx-auto box-border flex min-h-[64px] max-w-[1440px] items-center justify-between gap-3 py-8 md:min-h-[80px] md:py-4">
+      <div className="relative mx-auto box-border flex min-h-[64px] max-w-[1440px] items-center justify-between gap-3 py-2 md:min-h-[80px] md:py-4">
         <div className="flex items-center gap-3">
           <Link href="/" variant="subtle">
             <span className="inline-flex items-center gap-x-3 whitespace-nowrap">
@@ -26,7 +26,7 @@ export default function Header() {
               ) : (
                 <Logo aria-hidden="true" className="inline-block shrink-0 align-middle" />
               )}
-              <h2 className="ml-[23px] mt-0.5 inline-block align-middle text-lg font-400 leading-tight">
+              <h2 className="ml-[23px] mt-0.5 hidden align-middle text-lg font-400 leading-tight sm:inline-block">
                 Track Stack
               </h2>
             </span>

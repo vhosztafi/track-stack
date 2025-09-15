@@ -8,7 +8,7 @@ export type LineStatusGridProps = {
 export default function LineStatusGrid({ items }: LineStatusGridProps) {
   return (
     <div className="rounded-b-xl p-0">
-      <ul className="m-0 grid list-none grid-cols-1 gap-x-6 p-0 xl:grid-cols-2 xl:gap-y-2">
+      <ul className="m-0 grid list-none grid-cols-1 gap-x-6 p-0 md:grid-cols-2 md:gap-y-2">
         {items.map((item) => (
           <li key={item.id}>
             <LineStatusCard item={item} />
