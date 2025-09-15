@@ -113,12 +113,51 @@ VITE_TFL_APP_KEY=yourkey
 - Test coverage (unit, integration)
 - Deployment of Storybook alongside app
 
+### ✅ Phase 6 — Enhancements
+
+- **Embed mode** — minimal headerless view for dashboards/iframes
+- **Deep-link support** — shareable URLs with filters
+
+---
+
+## Embed Mode
+
+TrackStack now supports an embed mode perfect for dashboards and iframes. Access it at `/embed` with optional URL
+parameters for customization.
+
+### Basic Usage
+
+```html
+
+<iframe
+        src="/embed"
+        width="100%"
+        height="600"
+        frameborder="0"
+        title="Tube Status">
+</iframe>
+```
+
+### URL Parameters
+
+- **`tab`**: Filter services (`all`, `active`, `paused`)
+- **`hideTitle`**: Hide the "Status" heading (`true`)
+- **`hideTabs`**: Hide tab navigation (`true`)
+
+### Examples
+
+- **Active services only**: `/embed?tab=active`
+- **Minimal widget**: `/embed?tab=active&hideTitle=true&hideTabs=true`
+- **Disruptions only**: `/embed?tab=paused&hideTitle=true`
+
+### Demo
+
+Visit `/embed-demo.html` to see all embed configurations in action.
+
 ---
 
 ## Future Enhancements (post-challenge)
 
-- **Embed mode** — minimal headerless view for dashboards/iframes
-- **Deep-link support** — shareable URLs with filters (`?filter=paused`, `?open=central`)
 - **Updated Overground branding** — reflect 2024/25 line renamings & striped colours
 - **CI-powered accessibility testing** — axe + Cypress integration
 - **PWA support** — installable offline-first experience
