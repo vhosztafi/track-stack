@@ -1,0 +1,42 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/*.css",
+      "/*.js",
+      "/*.json",
+      "/*.png",
+      "/*.jpg",
+      "/*.svg",
+      "/embed-demo.html"
+    ]
+  },
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; connect-src 'self' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+  },
+  "routes": [
+    {
+      "route": "/embed-demo.html",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; connect-src 'self' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors *; frame-src https:"
+      }
+    }
+  ],
+  "mimeTypes": {
+    ".webmanifest": "application/manifest+json"
+  },
+  "responseOverrides": {
+    "400": {
+      "rewrite": "/index.html"
+    },
+    "404": {
+      "rewrite": "/index.html"
+    }
+  }
+}
