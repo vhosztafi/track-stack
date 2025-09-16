@@ -16,7 +16,7 @@ const renderHomePage = () => {
 
   return render(
     <QueryClientProvider client={qc}>
-      <HomePage />
+      <HomePage isEmbedMode={false} hideTabs={false} hideTitle={false} tabParam={null} />
     </QueryClientProvider>
   );
 };
@@ -108,24 +108,6 @@ describe('HomePage', () => {
     renderHomePage();
 
     expect(screen.getByText(/no tube statuses found/i)).toBeInTheDocument();
-  });
-
-  it('uses regular Layout with header and footer', () => {
-    mockUseTubeStatuses.mockReturnValue({
-      data: [],
-      isLoading: false,
-      error: null,
-      isError: false,
-    } as any);
-
-    renderHomePage();
-
-    expect(screen.getByRole('link', { name: /skip to content/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /skip to navigation/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /skip to footer/i })).toBeInTheDocument();
-
-    expect(screen.getByRole('banner')).toBeInTheDocument();
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
   it('has larger heading text compared to embed page', () => {

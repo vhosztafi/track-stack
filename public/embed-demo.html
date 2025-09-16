@@ -74,37 +74,37 @@
       <div class="demo-section">
         <h2>1. Full Embed Mode (Default)</h2>
         <p>Shows the complete status view with title and tabs.</p>
-        <div class="url-example">URL: /embed</div>
+        <div class="url-example">URL: /?view=embed</div>
         <div class="iframe-container">
-          <iframe src="https://trackstack.live/embed" height="600"></iframe>
+          <iframe src="https://trackstack.live/?view=embed" height="600"></iframe>
         </div>
       </div>
 
       <div class="demo-section">
         <h2>2. Embed with Active Services Only</h2>
         <p>Shows only active services (no disruptions).</p>
-        <div class="url-example">URL: /embed?tab=active</div>
+        <div class="url-example">URL: /?view=embed&tab=active</div>
         <div class="iframe-container">
-          <iframe src="https://trackstack.live/embed?tab=active" height="400"></iframe>
+          <iframe src="https://trackstack.live/?view=embed&tab=active" height="400"></iframe>
         </div>
       </div>
 
       <div class="demo-section">
         <h2>3. Embed with Paused Services Only</h2>
         <p>Shows only services with disruptions.</p>
-        <div class="url-example">URL: /embed?tab=paused</div>
+        <div class="url-example">URL: /?view=embed&tab=paused</div>
         <div class="iframe-container">
-          <iframe src="https://trackstack.live/embed?tab=paused" height="400"></iframe>
+          <iframe src="https://trackstack.live/?view=embed&tab=paused" height="400"></iframe>
         </div>
       </div>
 
       <div class="demo-section">
         <h2>4. Minimal Embed (No Title, No Tabs)</h2>
         <p>Ultra-minimal view for dashboard widgets.</p>
-        <div class="url-example">URL: /embed?hideTitle=true&hideTabs=true</div>
+        <div class="url-example">URL: /?view=embed&hideTitle=true&hideTabs=true</div>
         <div class="iframe-container">
           <iframe
-            src="https://trackstack.live/embed?hideTitle=true&hideTabs=true"
+            src="https://trackstack.live/?view=embed&hideTitle=true&hideTabs=true"
             height="300"
           ></iframe>
         </div>
@@ -113,10 +113,10 @@
       <div class="demo-section">
         <h2>5. Compact Dashboard Widget</h2>
         <p>Shows only active services with minimal UI.</p>
-        <div class="url-example">URL: /embed?tab=active&hideTitle=true&hideTabs=true</div>
+        <div class="url-example">URL: /?view=embed&tab=active&hideTitle=true&hideTabs=true</div>
         <div class="iframe-container">
           <iframe
-            src="https://trackstack.live/embed?tab=active&hideTitle=true&hideTabs=true"
+            src="https://trackstack.live/?view=embed&tab=active&hideTitle=true&hideTabs=true"
             height="250"
           ></iframe>
         </div>
@@ -126,14 +126,14 @@
         <h2>Implementation Examples</h2>
         <h3>HTML iframe:</h3>
         <div class="code-block">
-          &lt;iframe src="/embed?tab=active&hideTitle=true&hideTabs=true" width="100%" height="300"
-          frameborder="0" title="Tube Status"&gt; &lt;/iframe&gt;
+          &lt;iframe src="?view=embed&tab=active&hideTitle=true&hideTabs=true" width="100%"
+          height="300" frameborder="0" title="Tube Status"&gt; &lt;/iframe&gt;
         </div>
 
         <h3>React Component:</h3>
         <div class="code-block">
           const TubeStatusWidget = () => ( &lt;iframe
-          src="/embed?tab=active&hideTitle=true&hideTabs=true" width="100%" height="300"
+          src="?view=embed&tab=active&hideTitle=true&hideTabs=true" width="100%" height="300"
           frameBorder="0" title="Tube Status" /&gt; );
         </div>
 
