@@ -32,18 +32,21 @@ describe('App', () => {
     } as any);
   });
 
-  it('renders home page by default at root route', () => {
+  it('uses regular Layout with header and footer', () => {
+    mockUseTubeStatuses.mockReturnValue({
+      data: [],
+      isLoading: false,
+      error: null,
+      isError: false,
+    } as any);
+
     renderApp();
+
+    expect(screen.getByRole('link', { name: /skip to content/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /skip to navigation/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /skip to footer/i })).toBeInTheDocument();
 
     expect(screen.getByRole('banner')).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /status/i })).toBeInTheDocument();
-  });
-
-  it('renders home page with larger heading text', () => {
-    renderApp();
-
-    const heading = screen.getByRole('heading', { name: /status/i });
-    expect(heading).toHaveClass('text-4xl', 'sm:text-6xl');
   });
 });

@@ -122,7 +122,7 @@ VITE_TFL_APP_KEY=yourkey
 
 ## Embed Mode
 
-TrackStack now supports an embed mode perfect for dashboards and iframes. Access it at `/embed` with optional URL
+TrackStack now supports an embed mode perfect for dashboards and iframes. Access it at `/?view=embed` with optional URL
 parameters for customization.
 
 ### Basic Usage
@@ -130,7 +130,7 @@ parameters for customization.
 ```html
 
 <iframe
-        src="/embed"
+        src="/?view=embed"
         width="100%"
         height="600"
         frameborder="0"
@@ -146,9 +146,9 @@ parameters for customization.
 
 ### Examples
 
-- **Active services only**: `/embed?tab=active`
-- **Minimal widget**: `/embed?tab=active&hideTitle=true&hideTabs=true`
-- **Disruptions only**: `/embed?tab=paused&hideTitle=true`
+- **Active services only**: `/?view=embed&tab=active`
+- **Minimal widget**: `/?view=embed&tab=active&hideTitle=true&hideTabs=true`
+- **Disruptions only**: `/?view=embed&tab=paused&hideTitle=true`
 
 ### Demo
 
