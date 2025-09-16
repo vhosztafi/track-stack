@@ -19,7 +19,7 @@ jobs:
           - https://storybook.trackstack.live/
     steps:
       - name: Checkout (for .zap/rules.tsv)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.14.0
