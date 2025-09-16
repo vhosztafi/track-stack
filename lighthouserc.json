@@ -1,0 +1,38 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist",
+      "url": ["/index.html"],
+      "numberOfRuns": 3
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "installable-manifest": "off",
+        "service-worker": "off",
+        "maskable-icon": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "csp-xss": "warn",
+        "uses-long-cache-ttl": [
+          "warn",
+          {
+            "maxLength": 10
+          }
+        ],
+        "unused-javascript": [
+          "warn",
+          {
+            "maxLength": 1
+          }
+        ],
+        "content-width": "error",
+        "frame-title": "error",
+        "meta-description": "error"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
