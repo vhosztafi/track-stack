@@ -1,10 +1,9 @@
-name: Static Web Apps CI/CD - Storybook
+name: Static Web Apps CI/CD - Storybook - Prod
 
 on:
   push:
     branches:
       - master
-      - dev
 
 jobs:
   build_and_deploy_job:
