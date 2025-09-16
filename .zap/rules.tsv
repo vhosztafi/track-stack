@@ -1,5 +1,5 @@
-# ruleId  threshold  note
-10011    WARN   (Cookie Without Secure Flag)
-10015    WARN   (Incomplete or No Cache-control and Pragma HTTP Header Set)
-10054    WARN   (X-Frame-Options Header Not Set)
-10035    WARN   (Strict-Transport-Security Header Missing)
+# ruleId	threshold	note
+10011	WARN	(Cookie Without Secure Flag)
+10015	WARN	(Incomplete or No Cache-control and Pragma HTTP Header Set)
+10054	WARN	(Cookie without SameSite Attribute)
+10035	WARN	(Strict-Transport-Security Header Missing)
