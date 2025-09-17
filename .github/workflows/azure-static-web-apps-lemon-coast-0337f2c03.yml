@@ -1,4 +1,4 @@
-name: Static Web Apps CI/CD - React - Prod
+name: SWA CI/CD - React - Prod
 
 on:
   push:

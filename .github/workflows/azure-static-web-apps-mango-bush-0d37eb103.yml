@@ -1,4 +1,4 @@
-name: Static Web Apps CI/CD - React - Dev
+name: SWA CI/CD - React - Dev
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_COAST_0337F2C03 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          production_branch: master
+          production_branch: dev
           action: 'upload'
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
@@ -49,6 +49,6 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_COAST_0337F2C03 }}
-          production_branch: master
+          production_branch: dev
           action: 'close'
           app_location: ''
