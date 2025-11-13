@@ -96,13 +96,13 @@ jobs:
         run: npm run storybook:build
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: dist
           path: dist/
 
       - name: Upload Storybook artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: storybook-static
           path: storybook-static/
@@ -118,7 +118,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: dist
           path: dist/
